@@ -39,6 +39,9 @@ export default defineConfig(({ mode }) => {
             if (/\.(jpe?g|png|webp|avif|gif)$/.test(name ?? '')) {
               return 'assets/images/[name][extname]';
             }
+            if (/\.(woff|woff2)$/.test(name ?? '')) {
+              return 'assets/fonts/[name][extname]';
+            }
             return 'assets/[ext]/[name][extname]';
           },
         },
