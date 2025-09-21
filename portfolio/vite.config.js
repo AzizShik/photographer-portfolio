@@ -7,10 +7,13 @@ import { resolve } from 'path';
 export default defineConfig(({ mode }) => {
   return {
     root: resolve(__dirname, 'src'),
-    publicDir: resolve(__dirname, 'public'),
+    publicDir: resolve(__dirname, 'src/public'),
     // base: mode === 'production' ? '/azizshik-JSFE2025Q3/' : '/',
     base: '/',
     plugins: [imagetools()],
+    server: {
+      open: true,
+    },
     css: {
       postcss: {
         plugins: [autoprefixer(), sortMediaQueries()],
@@ -21,6 +24,7 @@ export default defineConfig(({ mode }) => {
     },
     build: {
       outDir: resolve(__dirname, 'dist'),
+      emptyOutDir: true,
       minify: false,
       cssMinify: false,
       rollupOptions: {
