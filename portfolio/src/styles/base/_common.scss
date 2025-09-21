@@ -23,6 +23,16 @@ p {
   margin: 0;
 }
 
+button {
+  background: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-family);
   font-size: 16px;
