@@ -47,6 +47,10 @@ export default defineConfig(({ mode }) => {
               return 'assets/fonts/[name][extname]';
             }
 
+            if (/\.svg$/.test(name ?? '')) {
+              return 'assets/icons/[name][extname]';
+            }
+
             return 'assets/[ext]/[name][extname]';
           },
         },
