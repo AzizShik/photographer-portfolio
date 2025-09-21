@@ -1,3 +1,19 @@
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
 body {
   font-family: var(--font-family);
   font-size: 16px;
@@ -5,4 +21,9 @@ body {
   font-weight: 400;
   background: var(--bg-color);
   color: var(--text-color);
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
 }

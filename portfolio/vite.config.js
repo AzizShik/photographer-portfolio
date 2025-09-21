@@ -15,6 +15,7 @@ export default defineConfig(({ mode }) => {
       open: true,
     },
     css: {
+      devSourcemap: true,
       postcss: {
         plugins: [autoprefixer(), sortMediaQueries()],
       },
@@ -27,6 +28,7 @@ export default defineConfig(({ mode }) => {
       emptyOutDir: true,
       minify: false,
       cssMinify: false,
+      sourcemap: true,
       rollupOptions: {
         input: resolve(__dirname, 'src/index.html'),
         output: {
@@ -36,12 +38,15 @@ export default defineConfig(({ mode }) => {
             if (/\.(css|scss)$/.test(name ?? '')) {
               return 'css/[name][extname]';
             }
+
             if (/\.(jpe?g|png|webp|avif|gif)$/.test(name ?? '')) {
               return 'assets/images/[name][extname]';
             }
+
             if (/\.(woff|woff2)$/.test(name ?? '')) {
               return 'assets/fonts/[name][extname]';
             }
+
             return 'assets/[ext]/[name][extname]';
           },
         },
