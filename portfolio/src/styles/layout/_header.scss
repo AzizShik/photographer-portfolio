@@ -1,4 +1,7 @@
 .header {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   height: 60px;
@@ -98,7 +101,7 @@
   }
 
   .header__link:hover {
-    color: var(--primary-color);
+    color: var(--hover-color);
   }
 
   .header__link:active {
@@ -107,7 +110,7 @@
 
   .header__burger:hover {
     .header__burger-line {
-      background: var(--primary-color);
+      background: var(--hover-color);
     }
   }
 }
