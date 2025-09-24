@@ -47,3 +47,34 @@ body {
   width: 100%;
   padding: 0 var(--container-offset);
 }
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.heading2 {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 125%;
+  text-transform: uppercase;
+  color: var(--text-color-second);
+}
+
+.heading3 {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+.paragraph {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--text-color-second);
+}
