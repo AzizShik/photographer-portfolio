@@ -5,3 +5,9 @@
 
 @use './layout/header';
 @use './layout/hero';
+
+@media (max-width: 380px) {
+  .devTools {
+    text-align: center;
+  }
+}
