@@ -6,6 +6,7 @@
 @use './layout/header';
 @use './layout/hero';
 @use './layout/about';
+@use './layout/portfolio';
 
 @media (max-width: 380px) {
   .devTools {

@@ -109,3 +109,11 @@
     max-width: 100%;
   }
 }
+
+@media (max-width: 768px) {
+  .about__column {
+    .about__image {
+      width: clamp(21.25rem, -2.5rem + 100vw, 45.5rem);
+    }
+  }
+}
