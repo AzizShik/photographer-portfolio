@@ -9,6 +9,7 @@
 @use './layout/portfolio';
 @use './layout/price';
 @use './layout/faq';
+@use './layout/footer';
 
 @media (max-width: 380px) {
   .devTools {
