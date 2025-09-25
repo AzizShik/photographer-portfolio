@@ -113,4 +113,10 @@
       background: var(--hover-color);
     }
   }
+
+  .header__burger:active {
+    .header__burger-line {
+      opacity: 0.75;
+    }
+  }
 }
