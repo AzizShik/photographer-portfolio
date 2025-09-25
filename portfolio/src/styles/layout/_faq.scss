@@ -75,7 +75,10 @@
 @media (max-width: 1150px) {
   .faq__inner {
     flex-direction: column;
-    align-items: center;
+  }
+
+  .faq__accordion  {
+    max-width: 100%;
   }
 }
 
