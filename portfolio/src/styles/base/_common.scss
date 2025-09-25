@@ -78,3 +78,15 @@ body {
   line-height: 150%;
   color: var(--text-color-second);
 }
+
+.button {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--text-color);
+  padding: 18px 20px;
+  background: #222;
+}
