@@ -31,6 +31,7 @@ button {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -40,6 +41,8 @@ body {
   font-weight: 400;
   background: var(--bg-color);
   color: var(--text-color);
+  position: relative;
+  overflow-x: hidden;
 }
 
 .container {
@@ -91,6 +94,10 @@ body {
   padding: 18px 20px;
   background: var(--button-bg-color);
   transition: all 0.3s ease;
+}
+
+._lock {
+  overflow: hidden;
 }
 
 @media (hover: hover) {
