@@ -8,8 +8,8 @@ export default defineConfig(({ mode }) => {
   return {
     root: resolve(__dirname, 'src'),
     publicDir: resolve(__dirname, 'src/public'),
-    // base: mode === 'production' ? '/azizshik-JSFE2025Q3/' : '/',
-    base: '/',
+    base: mode === 'production' ? '/azizshik-JSFE2025Q3/' : '/',
+    // base: '/',
     plugins: [imagetools()],
     server: {
       open: true,
