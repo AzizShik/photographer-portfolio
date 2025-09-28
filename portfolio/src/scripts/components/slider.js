@@ -3,27 +3,54 @@ export default function sliderInit() {
   const sliderWrapper = document.querySelector('[data-slider_wrapper]');
   const sliderContainer = document.querySelector('[data-slider_container]');
 
-  let wrapperWidth = 0;
-  const containerWidth = sliderContainer.offsetWidth;
-  const children = sliderContainer.children;
-  const gapBetweenChildren = 20;
+  let wrapperWidth,
+    containerWidth,
+    prevSlideWidth,
+    nextSlideWidth,
+    maxTranslateX;
 
-  for (let i = 0; i < children.length; i++) {
-    wrapperWidth += children[i].offsetWidth;
-    if (children.length - 1 > i) {
-      wrapperWidth += gapBetweenChildren;
+  function calculateSliderWidths() {
+    wrapperWidth = 0;
+    containerWidth = sliderContainer.offsetWidth;
+
+    const children = sliderContainer.children;
+    const gapBetweenChildren = 20;
+
+    for (let i = 0; i < children.length; i++) {
+      wrapperWidth += children[i].offsetWidth;
+      if (children.length - 1 > i) {
+        wrapperWidth += gapBetweenChildren;
+      }
     }
+
+    const prevSlideContainerPercent = 30 / 100;
+    const nextSlideContainerPercent = 70 / 100;
+    prevSlideWidth = containerWidth * prevSlideContainerPercent;
+    nextSlideWidth = containerWidth * nextSlideContainerPercent;
+
+    const containerOffset = 20;
+    maxTranslateX = (wrapperWidth - containerWidth) / 2 + containerOffset;
   }
 
-  const prevSlideContainerPercent = 30 / 100;
-  const nextSlideContainerPercent = 70 / 100;
-  const prevSlideWidth = containerWidth * prevSlideContainerPercent;
-  const nextSlideWidth = containerWidth * nextSlideContainerPercent;
+  calculateSliderWidths();
 
-  const containerOffset = 20;
-  const maxTranslateX = (wrapperWidth - containerWidth) / 2 + containerOffset;
+  let resizeWindowInterval;
+  let resizeWindowIntervalTimeout = 100;
 
-  console.log(maxTranslateX, prevSlideWidth);
+  window.addEventListener('resize', (e) => {
+    clearInterval(resizeWindowInterval);
+    resizeWindowInterval = setTimeout(() => {
+      calculateSliderWidths();
+
+      if (getSliderTransformValue() > maxTranslateX) {
+        sliderContainer.style.transform = `translateX(${maxTranslateX}px)`;
+      }
+
+      if (-1 * maxTranslateX > getSliderTransformValue()) {
+        sliderContainer.style.transform = `translateX(-${maxTranslateX}px)`;
+      }
+    }, resizeWindowIntervalTimeout);
+  });
 
   let sliderInterval;
   const sliderMoveByPx = 10;
@@ -48,8 +75,20 @@ export default function sliderInit() {
     sliderInterval = undefined;
   }
 
+  function isMobile() {
+    const isSmallScreen = window.matchMedia('(max-width: 768px)').matches;
+    const isTouchDevice =
+      'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    const userAgent = navigator.userAgent.toLowerCase();
+    const isMobileUA =
+      /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(
+        userAgent,
+      );
+    return isSmallScreen || (isTouchDevice && isMobileUA);
+  }
+
   sliderWrapper.addEventListener('mousemove', (e) => {
-    if (window.innerWidth <= 768) return;
+    if (isMobile()) return;
 
     const wrapperRect = sliderWrapper.getBoundingClientRect();
     const x = e.clientX - wrapperRect.left;
