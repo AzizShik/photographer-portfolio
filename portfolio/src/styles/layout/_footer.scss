@@ -16,7 +16,6 @@
 }
 
 .footer__title {
-  color: var(--text-color-second);
   margin-bottom: 20px;
 }
 
@@ -29,20 +28,6 @@
 
 .footer__form-input {
   flex-shrink: 1;
-  border: 1px solid var(--input-border-color);
-  background: var(--bg-color-second);
-  padding: 0px 12px;
-  max-width: 380px;
-  width: 100%;
-  height: 60px;
-
-  font-family: var(--second-family);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-  outline: none;
 }
 
 .footer__form-input::placeholder {
@@ -103,15 +88,6 @@
 }
 
 @media (hover: hover) {
-  .footer__form-input:hover {
-    border-color: var(--input-border-hover-color);
-  }
-
-  .footer__form-input:focus {
-    border-color: var(--hover-color);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  }
-
   .footer__socials-link:hover {
     color: var(--hover-color);
   }

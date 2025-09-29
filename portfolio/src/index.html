@@ -261,7 +261,7 @@
             </div>
             <div class="price__card-bottom">
               <p class="price__card-descr">For short sessions and quick results</p>
-              <button class="price__card-btn button">Book Now</button>
+              <button class="price__card-btn button" data-modal_open>Book Now</button>
             </div>
           </div>
 
@@ -281,7 +281,7 @@
             </div>
             <div class="price__card-bottom">
               <p class="price__card-descr">Perfect for couples, portraits, or lifestyle</p>
-              <button class="price__card-btn button">Book Now</button>
+              <button class="price__card-btn button" data-modal_open>Book Now</button>
             </div>
           </div>
 
@@ -302,7 +302,7 @@
             </div>
             <div class="price__card-bottom">
               <p class="price__card-descr">For when you want to capture everything</p>
-              <button class="price__card-btn button">Book Now</button>
+              <button class="price__card-btn button" data-modal_open>Book Now</button>
             </div>
           </div>
 
@@ -323,7 +323,7 @@
             </div>
             <div class="price__card-bottom">
               <p class="price__card-descr">Full-day or partial wedding coverage</p>
-              <button class="price__card-btn button">Book Now</button>
+              <button class="price__card-btn button" data-modal_open>Book Now</button>
             </div>
           </div>
 
@@ -521,12 +521,12 @@
 
   <footer class="footer" id="contacts">
     <div class="footer__inner">
-      <div class="footer__top">
-        <h2 class="footer__title heading3">Like my portfolio? Sign up for a shoot!</h2>
-        <form action="#" class="footer__form">
-          <input type="text" class="footer__form-input" placeholder="Your name">
-          <input type="text" class="footer__form-input" value="+1">
-          <button type="submit" class="footer__form-btn button">Book Now</button>
+      <div class="footer__top form-container">
+        <h2 class="footer__title form-container__title heading3">Like my portfolio? Sign up for a shoot!</h2>
+        <form action="#" class="footer__form form-container__form" data-footer_form>
+          <input type="text" class="footer__form-input form-container__form-input" placeholder="Your name">
+          <input type="text" class="footer__form-input form-container__form-input" value="+1">
+          <button type="submit" class="footer__form-btn form-container__form-btn button" data-footer_form-btn>Book Now</button>
         </form>
       </div>
       <div class="footer__bottom">
@@ -551,6 +551,28 @@
       </div>
     </div>
   </footer>
+
+  <div class="modal" data-modal>
+    <div class="modal__container" data-modal_container>
+      <button class="modal__close" data-modal_close_btn>
+        <svg class="modal__close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path d="M6 6L18 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
+      <div class="modal__form-container form-container">
+        <h2 class="modal__title form-container__title heading3">Like my portfolio? Sign up for a shoot!</h2>
+        <form action="#" class="modal__form  form-container__form" data-modal_form>
+          <input type="text" class="modal__form-container-input form-container__form-input" placeholder="Your name">
+          <input type="text" class="modal__form-container-input form-container__form-input" value="+1">
+          <button type="submit" class="modal__form-container-btn form-container__form-btn button">Book Now</button>
+        </form>
+      </div>
+    </div>
+  </div>
 
 
   <script type="module" src="./scripts/main.js"></script>

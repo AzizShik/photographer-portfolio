@@ -10,6 +10,7 @@
 @use './layout/price';
 @use './layout/faq';
 @use './layout/footer';
+@use './layout/modal';
 
 @media (max-width: 380px) {
   .devTools {
