@@ -16,7 +16,7 @@
       <a href="index.html" class="header__logo">
         <img class="header__logo-img" src="./assets/icons/logo.svg" alt="Logo">
       </a>
-      <nav class="header__nav" data-burger_nav >
+      <nav class="header__nav" data-burger_nav>
         <ul class="header__list" data-burger_nav_list>
           <li class="header__item">
             <a href="#about" class="header__link">About me</a>
@@ -338,11 +338,11 @@
             <h2 class="faq__info-title heading2">Frequently Asked Questions</h2>
             <p class="faq__info-descr paragraph">Everything You Wanted to Ask (and a Bit More)</p>
           </div>
-          <div class="faq__accordion">
-            <div class="faq__accordion-item faq__accordion-item--active">
+          <div class="faq__accordion" data-accordion_container>
+            <div class="faq__accordion-item faq__accordion-item--active" data-accordion_item>
               <div class="faq__accordion-question">
                 <h3 class="faq__accordion-question-text heading3">How do I book a shoot?</h3>
-                <button class="faq__accordion-button">
+                <button class="faq__accordion-button" data-accordion_button>
                   <svg class="faq__accordion-button-icon" width="16" height="2" viewBox="0 0 16 2" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -351,17 +351,19 @@
                   </svg>
                 </button>
               </div>
-              <p class="faq__accordion-answer paragraph">
-                Super simple – just message me through any convenient platform (Instagram, Telegram, WhatsApp, or the
-                contact form on this site). We’ll discuss your preferred date, city, and session type. Once confirmed,
-                I’ll reserve the date for you and send over preparation tips.
-              </p>
+              <div class="faq__accordion-answer-wrapper">
+                <p class="faq__accordion-answer paragraph">
+                  Super simple – just message me through any convenient platform (Instagram, Telegram, WhatsApp, or the
+                  contact form on this site). We’ll discuss your preferred date, city, and session type. Once confirmed,
+                  I’ll reserve the date for you and send over preparation tips.
+                </p>
+              </div>
             </div>
 
-            <div class="faq__accordion-item">
+            <div class="faq__accordion-item" data-accordion_item>
               <div class="faq__accordion-question">
                 <h3 class="faq__accordion-question-text heading3">Can I choose the location myself?</h3>
-                <button class="faq__accordion-button">
+                <button class="faq__accordion-button" data-accordion_button>
                   <svg class="faq__accordion-button-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -370,17 +372,19 @@
                   </svg>
                 </button>
               </div>
-              <p class="faq__accordion-answer paragraph">
-                Absolutely! If there’s a special place you love or have in mind — I’m happy to shoot there. If you’re
-                unsure, I can suggest beautiful spots with great lighting and atmosphere, tailored to your vision and
-                mood.
-              </p>
+              <div class="faq__accordion-answer-wrapper">
+                <p class="faq__accordion-answer paragraph">
+                  Absolutely! If there’s a special place you love or have in mind — I’m happy to shoot there. If you’re
+                  unsure, I can suggest beautiful spots with great lighting and atmosphere, tailored to your vision and
+                  mood.
+                </p>
+              </div>
             </div>
 
-            <div class="faq__accordion-item">
+            <div class="faq__accordion-item" data-accordion_item>
               <div class="faq__accordion-question">
                 <h3 class="faq__accordion-question-text heading3">How long does the shoot take?</h3>
-                <button class="faq__accordion-button">
+                <button class="faq__accordion-button" data-accordion_button>
                   <svg class="faq__accordion-button-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -389,17 +393,20 @@
                   </svg>
                 </button>
               </div>
-              <p class="faq__accordion-answer paragraph">
-                That depends on the package you choose. On average, sessions last from 1 to 4 hours. We’ll plan the pace
-                and type of shoot together — from relaxed city strolls and love stories to more dynamic or editorial
-                sessions.
-              </p>
+              <div class="faq__accordion-answer-wrapper">
+                <p class="faq__accordion-answer paragraph">
+                  That depends on the package you choose. On average, sessions last from 1 to 4 hours. We’ll plan the
+                  pace
+                  and type of shoot together — from relaxed city strolls and love stories to more dynamic or editorial
+                  sessions.
+                </p>
+              </div>
             </div>
 
-            <div class="faq__accordion-item">
+            <div class="faq__accordion-item" data-accordion_item>
               <div class="faq__accordion-question">
                 <h3 class="faq__accordion-question-text heading3">When will I receive the photos?</h3>
-                <button class="faq__accordion-button">
+                <button class="faq__accordion-button" data-accordion_button>
                   <svg class="faq__accordion-button-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -408,17 +415,20 @@
                   </svg>
                 </button>
               </div>
-              <p class="faq__accordion-answer paragraph">
-                You’ll receive your edited photos within 7-14 days. For event and wedding sessions — up to 30 days. I
-                deliver them in a stylish online gallery, where you can download them in full quality or easily share
-                with friends and family.
-              </p>
+              <div class="faq__accordion-answer-wrapper">
+                <p class="faq__accordion-answer paragraph">
+                  You’ll receive your edited photos within 7-14 days. For event and wedding sessions — up to 30 days. I
+                  deliver them in a stylish online gallery, where you can download them in full quality or easily share
+                  with friends and family.
+                </p>
+              </div>
+
             </div>
 
-            <div class="faq__accordion-item">
+            <div class="faq__accordion-item" data-accordion_item>
               <div class="faq__accordion-question">
                 <h3 class="faq__accordion-question-text heading3">Will you help me pose?</h3>
-                <button class="faq__accordion-button">
+                <button class="faq__accordion-button" data-accordion_button>
                   <svg class="faq__accordion-button-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -427,17 +437,21 @@
                   </svg>
                 </button>
               </div>
-              <p class="faq__accordion-answer paragraph">
-                Definitely! I’ll guide you gently throughout the session — where to look, how to move, how to relax. The
-                goal is to make you feel comfortable and natural. My approach is relaxed, and I’ll never force awkward
-                poses. The result? Real, expressive, and beautiful photos.
-              </p>
+              <div class="faq__accordion-answer-wrapper">
+                <p class="faq__accordion-answer paragraph">
+                  Definitely! I’ll guide you gently throughout the session — where to look, how to move, how to relax.
+                  The
+                  goal is to make you feel comfortable and natural. My approach is relaxed, and I’ll never force awkward
+                  poses. The result? Real, expressive, and beautiful photos.
+                </p>
+              </div>
+
             </div>
 
-            <div class="faq__accordion-item">
+            <div class="faq__accordion-item" data-accordion_item>
               <div class="faq__accordion-question">
                 <h3 class="faq__accordion-question-text heading3">What should I wear?</h3>
-                <button class="faq__accordion-button">
+                <button class="faq__accordion-button" data-accordion_button>
                   <svg class="faq__accordion-button-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -446,17 +460,21 @@
                   </svg>
                 </button>
               </div>
-              <p class="faq__accordion-answer paragraph">
-                After booking, I’ll send you a style guide with suggestions for colors, textures, and combinations. The
-                most important thing is that you feel confident in your outfit. I’m also happy to help you coordinate
-                looks or plan something cohesive for couples or groups.
-              </p>
+              <div class="faq__accordion-answer-wrapper">
+                <p class="faq__accordion-answer paragraph">
+                  After booking, I’ll send you a style guide with suggestions for colors, textures, and combinations.
+                  The
+                  most important thing is that you feel confident in your outfit. I’m also happy to help you coordinate
+                  looks or plan something cohesive for couples or groups.
+                </p>
+              </div>
+
             </div>
 
-            <div class="faq__accordion-item">
+            <div class="faq__accordion-item" data-accordion_item>
               <div class="faq__accordion-question">
                 <h3 class="faq__accordion-question-text heading3">Do you retouch the photos?</h3>
-                <button class="faq__accordion-button">
+                <button class="faq__accordion-button" data-accordion_button>
                   <svg class="faq__accordion-button-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -465,16 +483,18 @@
                   </svg>
                 </button>
               </div>
-              <p class="faq__accordion-answer paragraph">
-                Yes, all photos are color-corrected and lightly retouched. My editing style is clean and natural — no
-                overdone filters or fake skin. Just you, at your best. Extra retouching is available upon request.
-              </p>
+              <div class="faq__accordion-answer-wrapper">
+                <p class="faq__accordion-answer paragraph">
+                  Yes, all photos are color-corrected and lightly retouched. My editing style is clean and natural — no
+                  overdone filters or fake skin. Just you, at your best. Extra retouching is available upon request.
+                </p>
+              </div>
             </div>
 
-            <div class="faq__accordion-item">
+            <div class="faq__accordion-item" data-accordion_item>
               <div class="faq__accordion-question">
                 <h3 class="faq__accordion-question-text heading3">Can I get the raw files?</h3>
-                <button class="faq__accordion-button">
+                <button class="faq__accordion-button" data-accordion_button>
                   <svg class="faq__accordion-button-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -483,11 +503,15 @@
                   </svg>
                 </button>
               </div>
-              <p class="faq__accordion-answer paragraph">
-                I don’t deliver RAW files. My work includes not only shooting, but also careful selection and editing to
-                create a complete and polished result. You’ll receive only the best images, ready for printing, sharing,
-                or publishing.
-              </p>
+              <div class="faq__accordion-answer-wrapper">
+                <p class="faq__accordion-answer paragraph">
+                  I don’t deliver RAW files. My work includes not only shooting, but also careful selection and editing
+                  to
+                  create a complete and polished result. You’ll receive only the best images, ready for printing,
+                  sharing,
+                  or publishing.
+                </p>
+              </div>
             </div>
           </div>
         </div>
