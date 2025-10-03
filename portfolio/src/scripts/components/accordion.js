@@ -25,7 +25,9 @@ export default function accordionInit() {
   `;
 
   window.addEventListener('load', (e) => {
-    const stateIndex = getLocalStorage(localStorageKey);
+    const stateIndex = getLocalStorage(localStorageKey) ?? 0;
+
+    if (stateIndex === 'all closed') return;
 
     accordionItems.forEach((item, idx) => {
       if (idx === stateIndex) {
@@ -54,7 +56,7 @@ export default function accordionInit() {
       const isTargetActive = accordionItemEl.classList.contains(ACTIVE_CLASS);
 
       if (isTargetActive) {
-        removeLocalStorage(localStorageKey);
+        saveLocalStorage(localStorageKey, 'all closed');
         accordionItemEl.classList.remove(ACTIVE_CLASS);
         accordionTargetButton.innerHTML = SVG_PLUS_ICON;
       } else {

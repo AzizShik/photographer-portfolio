@@ -76,7 +76,7 @@ export default function sliderInit() {
   }
 
   function isMobile() {
-    const isSmallScreen = window.matchMedia('(max-width: 768px)').matches;
+    // const isSmallScreen = window.matchMedia('(max-width: 768px)').matches;
     const isTouchDevice =
       'ontouchstart' in window || navigator.maxTouchPoints > 0;
     const userAgent = navigator.userAgent.toLowerCase();
@@ -84,7 +84,7 @@ export default function sliderInit() {
       /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(
         userAgent,
       );
-    return isSmallScreen || (isTouchDevice && isMobileUA);
+    return isTouchDevice && isMobileUA;
   }
 
   sliderWrapper.addEventListener('mousemove', (e) => {

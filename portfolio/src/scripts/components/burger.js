@@ -23,6 +23,10 @@ export default function burgerInit() {
     fill: 'forwards',
   };
 
+  const burgerCloseTiming = {
+    duration: burgerAnimTime,
+  };
+
   function toggleMenu() {
     if (!isOpen) {
       isOpen = true;
@@ -35,7 +39,7 @@ export default function burgerInit() {
       } else {
         const animation = burgerNavEl.animate(
           burgerCloseAnim,
-          burgerOpenTiming,
+          burgerCloseTiming,
         );
         burgerBtnEl.classList.remove('header__burger--active');
         animation.addEventListener('finish', () => {
@@ -52,9 +56,29 @@ export default function burgerInit() {
 
   burgerBtnEl.addEventListener('click', toggleMenu);
   burgerNavListEl.addEventListener('click', (e) => {
+    if (window.innerWidth > 768) return;
     const el = e.target;
     if (el.closest('.header__link')) {
       toggleMenu();
     }
+  });
+
+  let resizeWindowInterval;
+  let resizeWindowIntervalTimeout = 100;
+
+  window.addEventListener('resize', (e) => {
+    clearInterval(resizeWindowInterval);
+
+    resizeWindowInterval = setTimeout((e) => {
+      if (
+        window.innerWidth > 768 &&
+        burgerNavEl.classList.contains('header__nav--active')
+      ) {
+        console.log('yes')
+        burgerBtnEl.classList.remove('header__burger--active');
+        burgerNavEl.classList.remove('header__nav--active');
+        htmlEl.classList.remove('_lock');
+      }
+    }, resizeWindowIntervalTimeout);
   });
 }

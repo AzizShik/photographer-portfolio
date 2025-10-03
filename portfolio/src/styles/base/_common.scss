@@ -142,6 +142,7 @@ body {
 @media (hover: hover) {
   .button:hover {
     background: var(--hover-color);
+    color: var(--text-color-second);
   }
 
   .button:active {

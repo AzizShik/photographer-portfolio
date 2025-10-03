@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
   return {
     root: resolve(__dirname, 'src'),
     publicDir: resolve(__dirname, 'src/public'),
-    base: mode === 'production' ? '/azizshik-JSFE2025Q3/' : '/',
+    base: mode === 'production' ? '/azizshik-JSFE2025Q3/portfolio/' : '/',
     // base: '/',
     plugins: [imagetools()],
     server: {
@@ -24,7 +24,7 @@ export default defineConfig(({ mode }) => {
       },
     },
     build: {
-      outDir: resolve(__dirname, 'dist'),
+      outDir: resolve(__dirname, 'dist/portfolio/'),
       emptyOutDir: true,
       minify: false,
       cssMinify: false,

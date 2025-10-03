@@ -53,6 +53,6 @@ export default function modalInit() {
   modalCloseBtn.addEventListener('click', closeModal);
   modalFormEl.addEventListener('submit', (e) => {
     e.preventDefault();
-    closeModal();
+    // closeModal();
   });
 }
