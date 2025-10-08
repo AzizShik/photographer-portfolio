@@ -4,6 +4,11 @@ import {
   saveLocalStorage,
 } from '../utils/localStorage';
 
+import {
+  getSessionStorage,
+  saveSessionStorage,
+} from '../utils/sesstionStorage';
+
 export default function accordionInit() {
   const accordionContainer = document.querySelector(
     '[data-accordion_container]',
@@ -25,7 +30,7 @@ export default function accordionInit() {
   `;
 
   window.addEventListener('load', (e) => {
-    const stateIndex = getLocalStorage(localStorageKey) ?? 0;
+    const stateIndex = getSessionStorage(localStorageKey) ?? 0;
 
     if (stateIndex === 'all closed') return;
 
@@ -56,7 +61,7 @@ export default function accordionInit() {
       const isTargetActive = accordionItemEl.classList.contains(ACTIVE_CLASS);
 
       if (isTargetActive) {
-        saveLocalStorage(localStorageKey, 'all closed');
+        saveSessionStorage(localStorageKey, 'all closed');
         accordionItemEl.classList.remove(ACTIVE_CLASS);
         accordionTargetButton.innerHTML = SVG_PLUS_ICON;
       } else {
@@ -69,7 +74,7 @@ export default function accordionInit() {
         });
 
         const activeIndex = Array.from(accordionItems).indexOf(accordionItemEl);
-        saveLocalStorage(localStorageKey, activeIndex);
+        saveSessionStorage(localStorageKey, activeIndex);
 
         accordionItemEl.classList.add(ACTIVE_CLASS);
         accordionTargetButton.innerHTML = SVG_MINUS_ICON;
