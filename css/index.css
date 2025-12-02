@@ -199,35 +199,35 @@ summary {
 
 @font-face {
   font-family: "Oswald";
-  src: url("/portfolio/assets/fonts/Oswald-Regular.woff") format("woff"), url("/portfolio/assets/fonts/Oswald-Regular.woff") format("woff2");
+  src: url("/photographer-portfolio/assets/fonts/Oswald-Regular.woff") format("woff"), url("/photographer-portfolio/assets/fonts/Oswald-Regular.woff") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Oswald";
-  src: url("/portfolio/assets/fonts/Oswald-Light.woff") format("woff"), url("/portfolio/assets/fonts/Oswald-Light.woff2") format("woff2");
+  src: url("/photographer-portfolio/assets/fonts/Oswald-Light.woff") format("woff"), url("/photographer-portfolio/assets/fonts/Oswald-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Mulish";
-  src: url("/portfolio/assets/fonts/Mulish-Italic.woff") format("woff"), url("/portfolio/assets/fonts/Mulish-Italic.woff2") format("woff2");
+  src: url("/photographer-portfolio/assets/fonts/Mulish-Italic.woff") format("woff"), url("/photographer-portfolio/assets/fonts/Mulish-Italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "Mulish";
-  src: url("/portfolio/assets/fonts/Mulish-Regular.woff") format("woff"), url("/portfolio/assets/fonts/Mulish-Regular.woff2") format("woff2");
+  src: url("/photographer-portfolio/assets/fonts/Mulish-Regular.woff") format("woff"), url("/photographer-portfolio/assets/fonts/Mulish-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Mulish";
-  src: url("/portfolio/assets/fonts/Mulish-Medium.woff") format("woff"), url("/portfolio/assets/fonts/Mulish-Medium.woff2") format("woff2");
+  src: url("/photographer-portfolio/assets/fonts/Mulish-Medium.woff") format("woff"), url("/photographer-portfolio/assets/fonts/Mulish-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
