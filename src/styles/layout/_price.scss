@@ -1,0 +1,124 @@
+.price {
+  background: var(--bg-color-second);
+}
+
+.price__info {
+  margin-bottom: 40px;
+}
+
+.price__title {
+  margin-bottom: 12px;
+}
+
+.price__descr {
+}
+
+.price__inner {
+  display: grid;
+  grid-template-columns: repeat(4, 320px);
+  // gap: 40px;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.price__card {
+  display: flex;
+  flex-direction: column;
+  min-height: 500px;
+
+  padding: 24px;
+  border: 1px solid var(--card-border-color);
+  transition: all 0.3s ease;
+}
+
+.price__card-top {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.price__card-title {
+  color: var(--text-color-second);
+}
+
+.price__card-list {
+}
+
+.price__card-list-item {
+  position: relative;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--text-color-second);
+  margin-bottom: 4px;
+  padding-left: 12px;
+}
+
+.price__card-list-item:last-child {
+  margin-bottom: 0;
+}
+
+.price__card-list-item:before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0px;
+  background-color: var(--text-color-second);
+}
+
+.price__card-price {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: var(--text-color-second);
+}
+
+.price__card-bottom {
+  margin-top: auto;
+}
+
+.price__card-descr {
+  font-family: var(--font-family);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--text-color-second);
+}
+
+.price__card-btn {
+  margin-top: 12px;
+  width: 100%;
+}
+
+@media (max-width: 1400px) {
+  .price__inner {
+    justify-content: center;
+    grid-template-columns: repeat(2, 320px);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .price__inner {
+    justify-content: center;
+    grid-template-columns: repeat(1, 320px);
+    gap: 20px;
+  }
+}
+
+@media (hover: hover) {
+  .price__card:hover {
+    border-color: var(--hover-color);
+    .price__card-btn {
+      background: var(--hover-color);
+      color: var(--text-color-second);
+    }
+  }
+}

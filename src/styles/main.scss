@@ -1,0 +1,19 @@
+@use './base/variables' as *;
+@use '../../node_modules/modern-normalize/modern-normalize.css';
+@use './base/fonts';
+@use './base/common';
+
+@use './layout/header';
+@use './layout/hero';
+@use './layout/about';
+@use './layout/portfolio';
+@use './layout/price';
+@use './layout/faq';
+@use './layout/footer';
+@use './layout/modal';
+
+@media (max-width: 380px) {
+  .devTools {
+    text-align: center;
+  }
+}
